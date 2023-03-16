@@ -1,0 +1,12 @@
+
+# Ignora la carpeta node_modules
+wp-admin
+wp-includes
+wp-content/languages
+wp-content/plugins
+
+# Ignora todos los archivos de texto
+# *.txt
+
+# Ignora los archivos relacionados a API keys
+# .env
