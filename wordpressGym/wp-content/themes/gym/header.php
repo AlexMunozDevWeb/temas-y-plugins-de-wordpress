@@ -11,6 +11,7 @@
 
 ?>
 <!doctype html>
+<!-- Languge attribute pone el idioma en el que se instala wordpress -->
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
