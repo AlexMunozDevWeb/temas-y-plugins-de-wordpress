@@ -46,13 +46,6 @@ function tema_vacio_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'tema_vacio' ),
-		)
-	);
-
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
@@ -135,21 +128,6 @@ function tema_vacio_widgets_init() {
 add_action( 'widgets_init', 'tema_vacio_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
- */
-function tema_vacio_scripts() {
-	wp_enqueue_style( 'tema_vacio-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'tema_vacio-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'tema_vacio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'tema_vacio_scripts' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -176,3 +154,31 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Añdiendo scripts y css
+ */
+function gymfit_scripts_styles(){
+	wp_enqueue_style( 'normalize', 'https://necolas.github.io/normalize.css/8.0.1/normalize.css', array(), '8.0.1' );
+	// El valor que va dentro de array(), siginifica que primero tiene que cargar lo que se le pasa por parámetro
+	// En este caso primero carga normalize y despues el style
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array('normalize'), '1.0.0' );
+}
+add_action( 'wp_enqueue_scripts', 'gymfit_scripts_styles' );
+
+/**
+ * Menu del tema
+ * add_action = añade añade una nueva acción
+ * init = la acción se ejecuta cuando se inicia el proyecto
+ * add_filter = modifica una acción
+ * Los menús se almacen en la Base de datos de WP en la tabla wp_terms
+ */
+function gym_fit_menu(){
+	register_nav_menus( 
+		array(
+			// __() esta función sirve para traducir el texto en este caso de Menu principal
+			// el gymfitness es el nombre del textdomain que se añade en el archivo CSS
+			'menu-principal' => __( 'Menu principal', 'gymfitness' )
+		)
+	 );
+}
+add_action( 'init', 'gym_fit_menu');
