@@ -19,7 +19,7 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function tema_vacio_setup() {
+function gymfitness_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
@@ -41,7 +41,7 @@ function tema_vacio_setup() {
 
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
-		*
+		* Añade la imagen destacada a los posts
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
@@ -93,7 +93,7 @@ function tema_vacio_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'tema_vacio_setup' );
+add_action( 'after_setup_theme', 'gymfitness_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
