@@ -85,8 +85,17 @@ img {
 	height: auto;
 }
 
+.imagen-destacada{
+	margin-bottom: 3rem;
+}
+
 .contenedor{
 	width: min( 95%, 120rem );
+	margin: 0 auto;
+}
+
+.contenido-centrado{
+	width: min( 95%, 80rem );
 	margin: 0 auto;
 }
 
@@ -94,7 +103,7 @@ img {
 .text-center{
 	text-align: center;
 }
-.text-primario{
+.text-primary{
 	color: var(--primario);
 }
 .texto-blanco{

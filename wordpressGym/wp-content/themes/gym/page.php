@@ -11,19 +11,13 @@
  *
  * @package tema_vacio
  */
-
+// get_header() -> carga el header si esta en la misma carpeta
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			the_title();
-			the_content();
-			// get_template_part( 'template-parts/content', 'page' );
-		endwhile; // End of the loop.
-		?>
+	<main id="primary" class="site-main contenedor seccion">
+
+		<?php get_template_part( 'template-parts/pagina'); ?>    
 
 	</main><!-- #main -->
 
