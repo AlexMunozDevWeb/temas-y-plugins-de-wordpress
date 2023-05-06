@@ -37,6 +37,7 @@ function gymfitness_setup() {
 		* hard-coded <title> tag in the document head, and expect WordPress to
 		* provide it for us.
 		*/
+	// Añade titulos dinámicos para cada página
 	add_theme_support( 'title-tag' );
 
 	/*
