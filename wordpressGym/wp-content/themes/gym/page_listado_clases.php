@@ -22,6 +22,11 @@ get_header();
               <a href="<?php the_permalink(); ?>">
                 <h3><?php the_title(); ?></h3>
               </a>
+              <?php 
+                $inicio = get_field( 'hora_inicio' );
+                $fin = get_field( 'hora_fin' );
+              ?>
+              <p><?php the_field( 'dias_clases' ); ?> - <?php echo $inicio . " a " . $fin ?></p>
             </div>
           </li>
 
