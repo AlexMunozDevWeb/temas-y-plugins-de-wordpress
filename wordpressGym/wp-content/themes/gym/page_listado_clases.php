@@ -5,7 +5,8 @@
 get_header();
 ?>
 
-	<main class="site-main contenedor seccion">
+	<main class="page-clases contenedor seccion">
+    <?php get_template_part( 'template-parts/content', 'page' ); ?>
     <ul class="listado-grid">
       <?php
         $args = array(
@@ -17,8 +18,8 @@ get_header();
           $clases->the_post(); ?>
 
           <li class="card">
+            <?php the_post_thumbnail(); ?>
             <div class="contenido">
-              <?php the_post_thumbnail(); ?>
               <a href="<?php the_permalink(); ?>">
                 <h3><?php the_title(); ?></h3>
               </a>

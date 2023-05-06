@@ -49,7 +49,9 @@ h1, h2, h3, h4{
 
 /* Heading */
 h1 {
-	font-size: 6rem;
+	font-size: 6rem;	
+	text-align: center;
+	color: var(--primario);
 }
 
 h2 {
@@ -222,3 +224,47 @@ hr{
 		margin: 0;
 	}
 }
+
+/* Cards */
+.listado-grid{
+	margin-top: 4rem;
+	display: grid;
+	gap: 2rem;
+}
+@media ( min-width: 768px ){
+	.page-clases .listado-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+.listado-grid .card {
+	background-image: linear-gradient( to bottom, transparent 0, rgb( 0 0 0 / .7));
+	position: relative;	
+	overflow: hidden;
+}
+.listado-grid .card img {
+	display: block;
+	position: relative;
+	height: 40rem;
+	object-fit: cover;
+	transition: transform .3s ease-in-out;
+	z-index: -1;
+}
+.listado-grid .card:hover img{
+	transform: scale(1.1);
+}
+.listado-grid .card .contenido{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: var(--blanco);
+	padding: 2rem;
+}
+.listado-grid .card .contenido h3 {
+	color: var(--blanco);	
+	margin: 0;
+}
+.listado-grid .card .contenido p {
+	color: var(--blanco);
+}
+
