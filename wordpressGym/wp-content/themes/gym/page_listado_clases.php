@@ -17,7 +17,12 @@ get_header();
           $clases->the_post(); ?>
 
           <li class="card">
-            <?php the_title(); ?>
+            <div class="contenido">
+              <?php the_post_thumbnail(); ?>
+              <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+              </a>
+            </div>
           </li>
 
         <?php 
