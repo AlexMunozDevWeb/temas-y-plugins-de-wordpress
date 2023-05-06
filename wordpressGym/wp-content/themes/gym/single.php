@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 	
-	<?php the_content(); ?>    
+	<h1>Desde single.php (CPT o entradas)</h1> 
 
 	</main><!-- #main -->
 
