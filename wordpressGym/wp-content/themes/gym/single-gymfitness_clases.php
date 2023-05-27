@@ -21,7 +21,7 @@ get_header();
         get_template_part( 'template-parts/clase'); 
       ?>
     </section>
-    <?php get_sidebar() ?>
+    <?php get_sidebar( 'clases' ); ?>
 	</main><!-- #main -->
 
 <?php

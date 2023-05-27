@@ -12,6 +12,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+require get_template_directory() . '/inc/widget.php';
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
