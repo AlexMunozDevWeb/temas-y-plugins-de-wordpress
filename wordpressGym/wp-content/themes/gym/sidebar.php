@@ -7,11 +7,14 @@
  * @package tema_vacio
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+// 	return;
+// }
 ?>
-
+	
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<h2>Sidebar aqui</h2>
+	<?php
+		dynamic_sidebar( 'sidebar_1' ); 
+	?>
 </aside><!-- #secondary -->
